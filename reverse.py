@@ -1,4 +1,6 @@
 import pandas as pd
-from quantitation import calc
-data = pd.read_csv('sample1.csv')
-print (calc(data))
+import quantitation as qt
+if __name__ == '__main__':
+    data = pd.read_csv('sample1.csv')
+    out = qt.validation(data)
+    out.to_csv('out.csv', index=False)
